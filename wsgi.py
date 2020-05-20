@@ -125,21 +125,21 @@ if __name__ == "__main__":
 	print("++-->> Python special variable ... __name__::", __name__)
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being run STANDALONE!!\n\n")
 	
-	app.run(host='0.0.0.0', debug=True)
+	application.run(host='0.0.0.0', debug=True)
 else:
 	print("++-->> Python special variable ... __name__::", __name__)
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being called by SOMEONE!!\n\n")
 	
 	# instantiate the Flask object and then run it
-	app = Flask(__name__)
+	application = Flask(__name__)
 	
-	@app.route('/',methods = ['POST', 'GET'])
+	@application.route('/',methods = ['POST', 'GET'])
 	def index():
 		return render_template('input_template.html')
 	# end of function
 	
 	
-	@app.route('/result',methods = ['POST', 'GET'])
+	@application.route('/result',methods = ['POST', 'GET'])
 	def result():
 		if request.method == 'POST':
 			result = request.form
