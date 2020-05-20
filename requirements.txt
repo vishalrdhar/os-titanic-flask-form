@@ -1,2 +1,14 @@
 gunicorn
 Flask
+math
+numpy
+matplotlib
+pandas
+os
+scipy.stats
+sklearn.linear_model
+pylab
+sklearn.model_selection
+warnings
+sklearn
+
