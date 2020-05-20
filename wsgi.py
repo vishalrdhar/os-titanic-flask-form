@@ -31,7 +31,7 @@ import os
 import scipy.stats as stats
 
 from sklearn.linear_model import LogisticRegression
-from pylab import rcParams
+# from pylab import rcParams
 from sklearn.model_selection import train_test_split
 
 import warnings
