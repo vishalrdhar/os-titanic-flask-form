@@ -5,7 +5,7 @@ matplotlib
 pandas
 scipy
 sklearn
-pylab
+pylab-sdk
 warnings
 
 
