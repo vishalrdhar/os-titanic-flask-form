@@ -3,10 +3,9 @@ Flask
 numpy
 matplotlib
 pandas
-scipy.stats
-sklearn.linear_model
-pylab
-sklearn.model_selection
-warnings
+scipy
 sklearn
+pylab
+warnings
+
 
