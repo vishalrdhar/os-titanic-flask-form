@@ -126,7 +126,7 @@ if __name__ == "__main__":
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being run STANDALONE!!\n\n")
 	
 	# instantiate the Flask object and then run it
-	app = Flask(__name__)
+	application = Flask(__name__)
 	
 	@application.route('/',methods = ['POST', 'GET'])
 	def index():
