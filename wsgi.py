@@ -125,6 +125,11 @@ if __name__ == "__main__":
 	print("++-->> Name mangled variable ... __name__::", __name__)
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being run STANDALONE!!\n\n")
 	
+	application.run(host='0.0.0.0', debug=True)
+else:
+	print("++-->> Name mangled variable ... __name__::", __name__)
+	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being called by SOMEONE!!\n\n")
+	
 	# instantiate the Flask object and then run it
 	application = Flask(__name__)
 	
@@ -161,11 +166,6 @@ if __name__ == "__main__":
 											prediction=prediction,
 												total_count=total_count)
 	# end of function
-	
-	application.run(host='0.0.0.0', debug=True)
-else:
-	print("++-->> Name mangled variable ... __name__::", __name__)
-	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being called by SOMEONE!!\n\n")
 # end of if else
 
 ###############################################################################
