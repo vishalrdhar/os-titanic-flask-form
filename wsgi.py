@@ -122,24 +122,24 @@ def my_main(input_list):
 #
 ###############################################################################
 if __name__ == "__main__":
-	print("++-->> Name mangled variable ... __name__::", __name__)
+	print("++-->> Python special variable ... __name__::", __name__)
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being run STANDALONE!!\n\n")
 	
-	application.run(host='0.0.0.0', debug=True)
+	app.run(host='0.0.0.0', debug=True)
 else:
-	print("++-->> Name mangled variable ... __name__::", __name__)
+	print("++-->> Python special variable ... __name__::", __name__)
 	print("++-->> ANALYZE_TITANIC_Logistic_Regression_APP.py program is being called by SOMEONE!!\n\n")
 	
 	# instantiate the Flask object and then run it
-	application = Flask(__name__)
+	app = Flask(__name__)
 	
-	@application.route('/',methods = ['POST', 'GET'])
+	@app.route('/',methods = ['POST', 'GET'])
 	def index():
 		return render_template('input_template.html')
 	# end of function
 	
 	
-	@application.route('/result',methods = ['POST', 'GET'])
+	@app.route('/result',methods = ['POST', 'GET'])
 	def result():
 		if request.method == 'POST':
 			result = request.form
